@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Translator</title>
+    <link rel="stylesheet" href="styles/main.css">
+</head>
+
+<body>
+    <div class="board">
+        <header>
+            <h1>Translater</h1>
+        </header>
+        <main>
+            <div class="left">
+                <aside>
+                    <form class="frm-filters" action="">
+                        <fieldset class="flds-search">
+                            <label for="wordInput">Word: </label>
+                            <input type="text" id="wordInput">
+
+                            <label for="lenguage">Language: </label>
+                            <select id="lenguage">
+                                <option value="">...</option>
+                                <option value="SpTEn">Spanish To English</option>
+                                <option value="EnTSp">English To Spanish</option>
+                            </select>
+                            <button type="button" id="translaterButton">Translate</button>
+                        </fieldset>
+                    </form>
+                    <section class="translation-done">
+                        <div id="translated-word">
+                            <!-- Translation result -->
+                        </div>
+                    </section>
+                    <section class="new-word">
+                        <form id="addWordForm">
+                            <label for="english">English:</label>
+                            <input type="text" id="english" name="english" required>
+    
+                            <label for="spanish">Spanish:</label>
+                            <input type="text" id="spanish" name="spanish" required>
+    
+                            <label for="example">Example:</label>
+                            <input type="text" id="example" name="example" required>
+    
+                            <label for="orderByCategoryForm">Order by Category:</label>
+                            <select id="orderByCategoryForm" name="category">
+                                <!-- Categories -->
+                            </select>
+    
+                            <button type="submit" id="addWord">Add Word</button>
+                        </form>
+                    </section>
+                </aside>
+            </div>
+            <section id="container-words">
+                <fieldset class="flds-filters">
+                    <div>
+                    <label for="orderByCategoryTable" id="order">Order by: </label>
+                    <select id="orderByCategoryTable" name="category">
+                        <option value="all">All Words</option>
+                        <!-- Categories available -->
+                    </select>
+                    </div>
+                    <div>
+                        <select id="orderByAlphabet">
+                            <option value="english-asc">English A-Z</option>
+                            <option value="english-desc">English Z-A</option>
+                            <option value="spanish-asc">Spanish A-Z</option>
+                            <option value="spanish-desc">Spanish Z-A</option>
+                        </select>                        
+                    </div>
+                </fieldset>
+                <section id="allWords">
+                    <!-- List of words -->
+                </section>
+            </section>
+        </main>
+        <footer>
+            &copy; Made by Jefferson Lopez and Brandon Rubiano Gil
+        </footer>
+
+        
+    </div>
+    <script type="module" src="scripts/main.js"></script>
+</body>
+
+</html>

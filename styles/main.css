@@ -1,0 +1,179 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.board {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #e9ecef; 
+}
+
+header, footer {
+    height: 10vh;
+    background-color: #495057; 
+    color: #ffffff; 
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+header {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+footer {
+    font-size: 0.9rem;
+}
+
+
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 2rem;
+
+aside {
+    flex: 1;
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 1rem;
+    overflow: hidden;
+    width: 47vw;
+}
+
+#translaterButton{
+    margin-bottom: 3%;
+}
+
+section#allWords {
+    flex: 3;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 1rem;
+    overflow-y: auto;
+
+}
+
+
+.flds-search, .frm-filters, #addWordForm {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+input[type="text"], select, button {
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    outline: none;
+    font-size: 1rem;
+}
+
+input[type="text"]:focus, select:focus {
+    border-color: #495057;
+    box-shadow: 0 0 5px rgba(72, 103, 125, 0.5);
+}
+
+button {
+    background-color: #28a745; 
+    color: #ffffff;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+#container-words{
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border: 1px solid #ccc;
+    max-height: 110vh;
+    width: 100%;
+}
+
+
+
+.words-table, .result-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+}
+
+.words-table th, .result-table th, .words-table td, .result-table td {
+    border: 1px solid #ddd;
+    padding: 0.75rem;
+    text-align: left;
+}
+
+.words-table th, .result-table th {
+    background-color: #495057; 
+    color: #ffffff; 
+    text-transform: uppercase;
+}
+
+.words-table tr:nth-child(even), .result-table tr:nth-child(even) {
+    background-color: #f8f9fa; 
+}
+
+
+
+
+.flds-filters{
+    margin: 3%;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    position: sticky;
+    width: 100%;
+    top: 0;
+    background-color: #E9ECEF;
+    z-index: 1;
+}
+
+#order {
+    margin-right: 23px;
+}
+ .flds-filters > div{
+    margin: 0 3%;
+}
+
+.new-word{
+    margin-top: 1rem;
+}
+
+.flds-search{
+    border: none;
+}
+
+
+
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    aside, section#allWords {
+        flex: 1;
+    }
+
+    .modal-content {
+        width: 100%;
+        padding: 15px;
+    }
+}
+}
